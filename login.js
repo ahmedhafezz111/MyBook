@@ -27,7 +27,7 @@ app.get("/",function(req,res){
 app.post("/",encoder,function(req,res){
     var email=req.body.email;
     var password=req.body.password;
-connection.query("select * from users where emai = ? and password = ? ",[email,password] ,function(error,results,fields){
+connection.query("select * from users where email = ? and password = ? ",[email,password] ,function(error,results,fields){
 if(results.length>0){
     res.redirect("/page2.html");
 
